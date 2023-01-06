@@ -5,6 +5,8 @@ body {
 /* The header and main are moved for readability */
 main {
     margin-left: 10px;
+    /* To push the footer to the bottom of the page on large screens */
+    min-height: calc(100vh - 190px)
 }
 
 /* header */
