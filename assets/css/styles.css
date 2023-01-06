@@ -6,7 +6,7 @@ body {
 main {
     margin-left: 10px;
     /* To push the footer to the bottom of the page on large screens */
-    min-height: calc(100vh - 190px)
+    min-height: calc(100vh - 175px)
 }
 
 /* header */
