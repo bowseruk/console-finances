@@ -96,7 +96,6 @@ var profit = 0;
 var profit_change = 0;
 
 // Average changes in profit/losses over the entire period
-var average_change = 0;
 var largest_profit = ["", 0];
 var largest_loss = ["", 0];
 
@@ -116,7 +115,7 @@ for (let i = 0; i < finances.length; i++) {
     };
 };
 // Work out the average of the changes. Have to remove a month as the difference will have one less than the total number.
-average_change = profit_change / (months - 1);
+var average_change = profit_change / (months - 1);
 // Create the required output message
 var message = "Financial Analysis\n----------------------------\nTotal Months: " +
 months + "\nTotal: $" + profit +
