@@ -1,0 +1,52 @@
+/* The body margin is removed so that the header goes to the edge */
+body {
+    margin: 0;
+}
+/* The header and main are moved for readability */
+main {
+    margin-left: 10px;
+}
+
+/* header */
+/* The footer styling */
+header, footer {
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+/* This creates the console effect */
+.console {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px;
+    margin: 5px 0;
+}
+
+.console samp {
+    width: auto;
+    height: 20px;
+}
+/* The margin */
+footer {
+    margin: 10px 0 -20px 0;
+}
+
+footer span {
+    margin: 0 auto;
+}
+/* Stop the snippet from overflowing */
+@media screen and (max-width: 500px) and (min-width: 400px) {
+    .console {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .console {
+        width: 200px;
+    }
+}
