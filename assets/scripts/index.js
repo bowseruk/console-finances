@@ -101,10 +101,13 @@ var largest_profit = ["", 0];
 var largest_loss = ["", 0];
 
 for (let i = 0; i < finances.length; i++) {
+    // Work out the absolute profit
     profit += finances[i][1];
     if (i > 0) {
+        // For change, we have to compare to the previous month
         month_change = finances[i][1]-finances[i-1][1];
         profit_change += month_change;
+        // If the change is the biggest yet, replace it (same for smallest in else if statement)
         if (month_change > largest_profit[1]) {
             largest_profit = [finances[i][0], month_change];
         } else if (month_change < largest_loss[1]) {
@@ -112,14 +115,16 @@ for (let i = 0; i < finances.length; i++) {
         } 
     };
 };
-
+// Work out the average of the changes. Have to remove a month as the difference will have one less than the total number.
 average_change = profit_change / (months - 1);
-
+// Create the required output message
 var message = "Financial Analysis\n----------------------------\nTotal Months: " +
 months + "\nTotal: $" + profit +
 "\nAverage Change: $" + average_change.toFixed(2) + "\n" +
 "Greatest Increase in Profits: " + largest_profit[0] + " ($" + largest_profit[1] + ")\n" +
 "Greatest Decrease in Profits: " + largest_loss[0] + " ($" + largest_loss[1] + ")";
+// Replace the endline character with a break for html display
 html_message = message.replace(/\n/g, "<br>")
+// Send the message to the console and to the page
 console.log(message);
 document.getElementById("result").innerHTML = html_message;
