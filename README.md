@@ -1,4 +1,4 @@
-# Bootcamp Project 4 - Console Finances
+# Bootcamp Challenge 4 - Console Finances
 
 ## Description 
 
